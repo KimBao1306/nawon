@@ -1,0 +1,44 @@
+/* FONTS */
+@import url('../fonts/Averta/font.css');
+@import url('../fonts/Bebas_Neue/font.css');
+/* LIBRARIES */
+@import url('../js/Font-awesome-4.7.0/css/font-awesome.min.css');
+@import url('../js/swiper/swiper.min.css');
+@import url('../js/aos/aos.css');
+
+/* Core variables and mixins - structure from NghiaTran */
+@import './core/reset';
+@import './core/variables';
+@import './core/mixins';
+@import './core/base';
+@import './core/animation';
+@import './core/mona';
+
+/* Components */
+@import './components/sec';
+@import './components/logo';
+@import './components/header';
+@import './components/footer';
+@import './components/customSwiper';
+@import './components/banner';
+@import './components/button';
+@import './components/form-control';
+@import './components/heading';
+@import './components/breadcrumb';
+@import './components/overlay';
+@import './components/pagination';
+@import './components/rating-star';
+@import './components/ratio';
+@import './components/social-nav';
+@import './components/tabs';
+@import './components/product';
+@import './components/blog';
+
+/* Pages */
+@import './pages/home';
+@import './pages/contact';
+@import './pages/size';
+@import './pages/portfolio';
+@import './pages/about';
+@import './pages/certificate';
+@import './pages/blog';

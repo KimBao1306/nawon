@@ -1,0 +1,32 @@
+.main-size {
+}
+.size__img {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.size__desc {
+	text-align: center;
+	color: $text-white-cl;
+	padding: 6.4rem 0;
+	background-color: $second-cl;
+	@include lh(24, 16);
+	@include max-media(768px) {
+		padding: 3.2rem 0;
+	}
+}
+.size-product {
+	.col {
+		width: calc(100% / 3);
+	}
+	.c-product__img img {
+		filter: none;
+	}
+	@include max-media(500px) {
+		.col {
+			width: 100%;
+		}
+	}
+}

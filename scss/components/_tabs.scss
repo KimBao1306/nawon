@@ -1,0 +1,93 @@
+.tabs {
+	display: flex;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid $gray-cl;
+	li {
+		font-size: 1.8rem;
+		position: relative;
+		padding: 2rem 1.5rem;
+		text-transform: uppercase;
+		color: rgba($color: $text-black-cl, $alpha: 0.6);
+		transition: $t1;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -0.1rem;
+			left: 0;
+			z-index: 1;
+			width: 0;
+			height: 0.1rem;
+			background-color: $main-cl;
+			transition: $t1;
+		}
+		&:hover {
+			color: $main-cl;
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+	li.--active {
+		color: $main-cl;
+		font-weight: bold;
+		&:after {
+			display: block;
+			width: 100%;
+		}
+	}
+	@include max-media(500px) {
+		li {
+			font-size: 1.6rem;
+		}
+	}
+	// @include max-media(500px) {
+	// 	li {
+	// 		width: auto;
+	// 		height: 5rem;
+	// 		&:after {
+	// 			right: -2.5rem;
+	// 			border-width: 2.5rem 0 2.5rem 2.5rem;
+	// 		}
+	// 	}
+	// 	.main-title {
+	// 		font-size: 1.6rem;
+	// 	}
+	// }
+	// &.no-box-shadow li {
+	// 	box-shadow: none;
+	// }
+}
+.tabs-2 {
+	position: absolute;
+}
+.tab-link {
+	cursor: pointer;
+}
+.tab-content {
+	display: none;
+	&.--active {
+		display: block;
+		animation: fadeInUp $t2 forwards;
+	}
+}
+
+.tabs__see-more {
+	display: none;
+	cursor: pointer;
+	margin-bottom: 3rem;
+	div {
+		padding: 8px;
+		font-size: 12px;
+		color: $text-white-cl;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: $main-cl;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	@include max-media(768px) {
+		display: block;
+	}
+}

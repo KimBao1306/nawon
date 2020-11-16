@@ -1,0 +1,83 @@
+@include keyframes(fadeIn) {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@include keyframes(fadeInUp) {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 20%, 0);
+		transform: translate3d(0, 20%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@include keyframes(fixedMenu) {
+	0% {
+		opacity: 0.7;
+		@include transform(translateY(-100%));
+	}
+	100% {
+		opacity: 1;
+		@include transform(translateY(0));
+	}
+}
+@include keyframes(showTab) {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		filter: blur(15px);
+	}
+	to {
+		filter: blur(0);
+	}
+}
+@keyframes slideOut {
+	from {
+		filter: blur(0);
+	}
+	to {
+		filter: blur(15px);
+	}
+}
+@keyframes heartbeat {
+	0% {
+		transform: scale(0.75);
+	}
+	20% {
+		transform: scale(1);
+	}
+	40% {
+		transform: scale(0.75);
+	}
+	60% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	100% {
+		transform: scale(0.75);
+	}
+}
+@include keyframes(rotateBorder) {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(1turn);
+	}
+}

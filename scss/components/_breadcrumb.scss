@@ -1,0 +1,122 @@
+.sec-breadcrumb {
+	padding: 1rem 0;
+	background-color: rgba($color: #191919, $alpha: 0.1);
+}
+.breadcrumb {
+	@include flex(row, flex-start, center, wrap);
+	li {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 1.2rem;
+			width: 0.6rem;
+			height: 0.6rem;
+			background-color: $second-cl;
+			@include br(100%);
+			@include transform(translateY(-50%));
+		}
+		&.--active a {
+			color: $black-cl;
+		}
+	}
+	li:last-child {
+		a {
+			padding: 0;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	a {
+		padding-right: 3rem;
+		color: rgba($color: #000000, $alpha: 0.5);
+		@include transition($t1);
+		&:hover {
+			color: $second-cl;
+		}
+	}
+}
+.breadcrumb.breadcrumb-2 {
+	@include flex(row, flex-start, center, wrap);
+	li {
+		position: relative;
+		padding-bottom: 1.7rem;
+		&::after {
+			top: calc(100% - 0.5rem);
+			left: 0;
+			width: calc(100% - 3rem);
+			height: 0.5rem;
+			display: none;
+			transform: none;
+			border-radius: 0;
+			background-color: $second-cl;
+		}
+		&.--active {
+			&::after {
+				display: block;
+			}
+		}
+
+		a {
+			position: relative;
+			&::after {
+				position: absolute;
+				content: '/';
+				top: 50%;
+				transform: translateY(-50%);
+				right: 1.2rem;
+				width: auto;
+				height: auto;
+				background: none;
+				font-weight: bold;
+				font-size: 1.4rem;
+				color: $white-cl;
+			}
+		}
+		&:last-child a::after {
+			display: none;
+		}
+	}
+	a {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: $white-cl;
+		&:hover {
+			color: $main-cl;
+		}
+	}
+	@include max-media(1024px) {
+		li {
+			&::after {
+				width: calc(100% - 2rem);
+			}
+			.main-title {
+				font-size: 1.8rem;
+			}
+			a {
+				padding-right: 2rem;
+				&::after {
+					right: 0.7rem;
+				}
+			}
+		}
+	}
+	@include max-media(768px) {
+		li {
+			&::after {
+				top: 70%;
+			}
+			.main-title {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	@include max-media(500px) {
+		a {
+			font-size: 1.1rem;
+		}
+	}
+}

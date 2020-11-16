@@ -1,0 +1,29 @@
+.sec {
+	padding: 10rem 0;
+	&-2 {
+		padding: 8rem 0;
+	}
+	&-3 {
+		padding: 7rem 0;
+	}
+	&-4 {
+		padding: 5rem 0;
+	}
+	@include max-media(1024px) {
+		&,
+		&-2,
+		&-3 {
+			padding: 6rem 0;
+		}
+		&-4 {
+			padding: 4rem 0;
+		}
+	}
+	@include max-media(768px) {
+		&,
+		&-2,
+		&-3 {
+			padding: 4rem 0;
+		}
+	}
+}

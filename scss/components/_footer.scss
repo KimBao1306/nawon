@@ -1,0 +1,137 @@
+.footer {
+	background-color: #f6f9f9;
+	color: $text-gray-cl;
+	font-size: 1.4rem;
+	.container > .cols > .col {
+		width: calc(100% / 12 * 6);
+		&:nth-child(2) {
+			width: calc(100% / 12 * 4);
+		}
+		&:last-child {
+			width: calc(100% / 12 * 2);
+		}
+	}
+	.sub-title {
+		color: $text-black-cl;
+		font-weight: bold;
+		+ li {
+			margin-bottom: 1.3rem;
+		}
+	}
+}
+.footer__split {
+	.col {
+		width: 50%;
+	}
+}
+.footer__info {
+	.footer__split-left > *,
+	.footer__split-right > * {
+		margin-bottom: 1.3rem;
+	}
+}
+.footer__product {
+	ul {
+		margin-bottom: 0;
+	}
+	li {
+		padding: 0.6rem 0;
+		text-transform: uppercase;
+		a {
+			color: $text-black-cl;
+			transition: $t1;
+			&:hover {
+				color: $main-cl;
+			}
+		}
+		&.--active a {
+			color: $main-cl;
+			font-weight: bold;
+		}
+	}
+}
+.footer__social {
+	margin-top: 2.4rem;
+	span {
+		display: inline-block;
+		margin-right: 3.4rem;
+		// width: 3rem;
+		height: 3rem;
+		border-radius: 5px;
+		font-size: 1.8rem;
+		// background: rgba($color: $black-cl, $alpha: 0.3);
+		&:hover a {
+			color: $main-cl;
+			transform: translateY(-0.5rem);
+		}
+	}
+	a {
+		@include mid-flex;
+		color: $black-cl;
+		width: 100%;
+		height: 100%;
+		transition: $t1 ease-in;
+	}
+}
+.footer__author {
+	&.--mobile {
+		display: none;
+	}
+}
+.footer__brands {
+	ul {
+		margin-bottom: 0;
+	}
+	li {
+		max-width: 7rem;
+		max-height: 7rem;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+@include max-media(768px) {
+	.footer__info,
+	.footer__brands {
+		.cols {
+			// margin-top: 0;
+			margin-bottom: 0;
+		}
+		.col {
+			// padding-top: 0;
+			padding-bottom: 0;
+			width: 100%;
+		}
+	}
+	.footer__author {
+		display: none;
+		&.--mobile {
+			margin-top: 1.5rem;
+			display: block;
+			text-align: center;
+		}
+	}
+}
+@include max-media(500px) {
+	.footer .container > .cols > .col {
+		width: 100%;
+		&:nth-child(2) {
+			width: 100%;
+		}
+		&:last-child {
+			width: 100%;
+		}
+	}
+	.footer__brands {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	.footer__social {
+		margin-top: 1.4rem;
+	}
+}
