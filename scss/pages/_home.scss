@@ -1,3 +1,6 @@
+.home .footer {
+	background-color: $bg-white-cl;
+}
 /* BANNER */
 .comming-soon {
 	position: absolute;
@@ -638,12 +641,36 @@
 	position: relative;
 }
 .home-pd {
-	.col {
+	.swiper-wrapper {
+	}
+	.swiper-slide {
 		width: 25%;
 	}
 	.c-product__img {
 		img {
 			filter: drop-shadow(1rem 1rem 3rem rgba(0, 0, 0, 0.16));
+		}
+	}
+	.swiper-pagination {
+		display: none;
+	}
+	@include min-media(769px) {
+		.swiper-wrapper {
+			flex-wrap: wrap;
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			display: none;
+		}
+	}
+	@include max-media(768px) {
+		.swiper-slide {
+			width: calc(100% / 3);
+		}
+	}
+	@include max-media(500px) {
+		.swiper-slide {
+			width: 100%;
 		}
 	}
 }

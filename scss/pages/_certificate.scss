@@ -45,15 +45,23 @@
 }
 .cf__wrap-item {
 	width: calc(100% / 3);
-	border: 0.1px dotted $white-cl;
 	padding: 3rem;
-	// border-image: url(../images/cf-border.png) 0.05rem round;
+	border: 0.1px dashed $white-cl;
+	border-image: url('../images/cf-border.png') 1 round;
+	border-right: none;
+	&:last-child {
+		border-right: 0.1px dashed $white-cl;
+	}
+	&:nth-child(n + 3) {
+		border-top: none;
+	}
 }
 .cf__item {
 	color: $text-white-cl;
 }
 .cf__img {
 	margin-bottom: 1.5rem;
+	cursor: zoom-in;
 	img {
 		width: auto;
 		height: 100%;

@@ -73,6 +73,7 @@
 	background-color: $second-cl;
 	outline: 0;
 	transform: translateY(-50%);
+	box-shadow: 1rem 1rem 3rem rgba($color: $bg-black-cl, $alpha: 0.16);
 	@include transition($t1);
 	&:after {
 		font-size: 3rem;

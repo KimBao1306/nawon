@@ -68,6 +68,7 @@
 			&:hover {
 				> .sub-menu {
 					transform: translateY(0);
+					box-shadow: 1rem 1rem 3rem rgba($color: $black-cl, $alpha: 0.2);
 					pointer-events: auto;
 					@include visible;
 				}
@@ -98,13 +99,13 @@
 		left: 0;
 		top: 100%;
 		width: 100%;
-		background: $main-cl;
+		background: $bg-white-cl;
 		a {
-			color: $second-cl;
+			color: $text-black-cl;
 			padding: 1.5rem;
 			@include min-media(1025px) {
 				&:hover {
-					color: $main-cl;
+					color: $text-white-cl;
 					background-color: $second-cl;
 				}
 			}
