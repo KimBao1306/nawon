@@ -12,7 +12,7 @@
 	&.--hover:hover {
 		.c-product__img {
 			transform: translateY(-30px) rotate(10deg);
-			transition: 600ms cubic-bezier(0.52, 0.28, 0.08, 1.245);
+			transition: 600ms $cubic3;
 		}
 		.c-product-bubble {
 			transform: scale(1);
@@ -31,7 +31,7 @@
 .c-product__img {
 	position: relative;
 	margin-bottom: 2rem;
-	transition: 600ms cubic-bezier(0.52, 0.28, 0.08, 1.245);
+	transition: 600ms $cubic3;
 
 	img {
 		width: auto;
@@ -49,7 +49,7 @@
 	height: 100%;
 	// z-index: 10;
 	transform: scale(0);
-	transition: $t2 cubic-bezier(0.52, 0.28, 0.08, 1.245);
+	transition: $t2 $cubic3;
 	.b1 {
 		position: absolute;
 		right: 4rem;

@@ -82,6 +82,7 @@ export default function HeaderModule() {
 
 	/** ANIMATION HEADER */
 	function animationHeader() {
+		if (!$('li.current-menu-item').length) return;
 		const $ul = $('.header__list');
 		const $arrAnchor = $ul.find('> li');
 		const $currentAnchor = $ul.find('> li.current-menu-item');
@@ -109,6 +110,7 @@ export default function HeaderModule() {
 		}
 
 		function findPosition(e) {
+			console.log(e);
 			w = $(e).outerWidth();
 			l = $(e).position().left;
 			return {w, l};

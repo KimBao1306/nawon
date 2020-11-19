@@ -6,7 +6,7 @@ import MfpModule from './module/MfpModule.js';
 import SwiperModule from './module/SwiperModule.js';
 import TabModule from './module/TabModule.js';
 
-jQuery(document).ready(function ($) {
+jQuery(function () {
 	AosModule();
 	HeaderModule();
 	CounterModule();

@@ -40,14 +40,16 @@ export default function SwiperModule() {
 			},
 		});
 	}
-	const animationSlide = (parent, child) => {
+	const animationSlide = (parent, child, timeDel = 700, timeAdd = 800) => {
 		return function () {
 			const i = this.activeIndex;
 			const $content = $(`${parent} .swiper-wrapper`);
-			$content.find(`${child}`).removeClass('--active');
+			setTimeout(function () {
+				$content.find(`${child}`).removeClass('--active');
+			}, timeDel);
 			setTimeout(function () {
 				$content.find(`${child}`).eq(i).addClass('--active');
-			}, 1000);
+			}, timeAdd);
 		};
 	};
 	// ABOUT
@@ -71,7 +73,7 @@ export default function SwiperModule() {
 	$('.pf-banner .is-slider').length &&
 		swiper(
 			'.pf-banner .is-slider',
-			animationSlide('.pf-banner', '.pf-banner__item')
+			animationSlide('.pf-banner', '.pf-banner__img-group')
 		);
 
 	// MENU BANNER
